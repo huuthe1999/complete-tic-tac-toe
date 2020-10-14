@@ -102,7 +102,7 @@ class Board extends React.Component {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
 
-      if(!squares.includes(null)){
+      if(!squares.includes(null) && !winnerName){
         status = 'No one wins ! Draw';
       }
       const sortType = sortAscending ? 'descending' : 'ascending';
